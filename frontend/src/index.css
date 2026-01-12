@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 text-gray-900 antialiased;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-gray-900;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-uno-purple hover:bg-uno-purple-dark text-white font-semibold py-3 px-6 rounded-lg
+           transition-all duration-200 transform hover:scale-105 shadow-uno hover:shadow-uno-lg
+           focus:outline-none focus:ring-2 focus:ring-uno-purple focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-uno-blue hover:bg-uno-blue-dark text-white font-semibold py-3 px-6 rounded-lg
+           transition-all duration-200 transform hover:scale-105 shadow-uno hover:shadow-uno-lg
+           focus:outline-none focus:ring-2 focus:ring-uno-blue focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply border-2 border-uno-purple text-uno-purple hover:bg-uno-purple hover:text-white
+           font-semibold py-3 px-6 rounded-lg transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-uno-purple focus:ring-offset-2;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl shadow-uno hover:shadow-uno-lg transition-shadow duration-300 p-6;
+  }
+
+  .card-game {
+    @apply bg-white rounded-2xl shadow-uno-lg p-8 backdrop-blur-sm;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg
+           focus:border-uno-purple focus:ring-2 focus:ring-uno-purple focus:ring-opacity-20
+           transition-all duration-200 outline-none;
+  }
+
+  .input:focus {
+    @apply border-uno-purple;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-semibold;
+  }
+
+  .badge-info {
+    @apply bg-uno-blue bg-opacity-10 text-uno-blue px-3 py-1 rounded-full text-sm font-semibold;
+  }
+}
+
+@layer utilities {
+  .gradient-uno {
+    background: linear-gradient(135deg, #784785 0%, #00a9df 100%);
+  }
+
+  .gradient-uno-soft {
+    background: linear-gradient(
+      135deg,
+      rgba(120, 71, 133, 0.05) 0%,
+      rgba(0, 169, 223, 0.05) 100%
+    );
+  }
+
+  .text-gradient-uno {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #784785 0%, #00a9df 100%);
+  }
+}

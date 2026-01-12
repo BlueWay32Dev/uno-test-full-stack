@@ -10,9 +10,9 @@ describe('GameStats', () => {
     expect(screen.getByText('8')).toBeInTheDocument();
     expect(screen.getByText('13')).toBeInTheDocument();
 
-    expect(screen.getByText('Successes')).toBeInTheDocument();
-    expect(screen.getByText('Errors')).toBeInTheDocument();
-    expect(screen.getByText('Total Moves')).toBeInTheDocument();
+    expect(screen.getByText('Aciertos')).toBeInTheDocument();
+    expect(screen.getByText('Errores')).toBeInTheDocument();
+    expect(screen.getByText('Total de Movimientos')).toBeInTheDocument();
   });
 
   it('renders zero stats correctly', () => {
